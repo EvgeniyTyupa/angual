@@ -1,0 +1,9 @@
+<div class="main">
+    <mat-card>
+        <h3>Edit Exercises</h3>
+        <div class="exercises">
+            <app-exercise *ngFor="let ex of exercises" [exercise]="ex"></app-exercise>
+        </div>
+        <button (click)="updateExercises()">Save</button>
+    </mat-card>
+</div>

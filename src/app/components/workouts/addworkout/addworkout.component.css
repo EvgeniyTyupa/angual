@@ -1,0 +1,66 @@
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px)
+}
+.mat-card{
+    width: 50%;
+    flex-shrink: 1;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 46px 0px white;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    padding-top: 24px;
+    position: relative;
+    top: -50px;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.header span{
+    margin-right: auto;
+    margin-left: 15px;
+    font-weight: 500;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+button:hover{
+    background-color: rgb(2, 95, 95);
+}
+h3{
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+.exercises{
+    max-height: 40vh;
+    overflow-y:auto
+}
+button[type="submit"]{
+    font-size: 16px;
+    margin-top: 25px;
+    width: 170px;
+    align-self: flex-start;
+}

@@ -1,0 +1,24 @@
+<div class="main">
+    <div class="field">
+        <label>Exercise name</label>
+        <select (change)="handleExercise($event.target.value)">
+            <option *ngFor="let option of options" [selected]="currentEx._id === option._id" value="{{option._id}}" [exercise]="option">{{option.title}}</option>
+        </select>
+    </div>
+    <div class="field">
+        <label>Repeats</label>
+        <input [value]="repeats" (change)="handleRepeats($event.target.value)">
+    </div>
+    <div class="field">
+        <label>Measurements</label>
+        <input [value]="measurement" (change)="handleMeasurement($event.target.value)"/>
+    </div>
+    <div *ngIf="currentEx" class="field">
+        <span>{{currentEx.measurement}}</span>
+    </div>
+    <div class="buttons">
+        <button (click)="moveUp()" class="move">▲</button>
+        <button (click)="moveDown()" class="move">▼</button>
+        <button (click)="deleteEx()" class="del">&#10060;</button>
+    </div>
+</div>

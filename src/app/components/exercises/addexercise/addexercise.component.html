@@ -1,0 +1,23 @@
+<div class="main">
+    <mat-card>
+        <h3>Add Exercise</h3>
+        <form (ngSubmit)="onSubmit()" name="addExForm" [formGroup]="form">
+            <div class="field">
+                <Label>Exercise Name</Label>
+                <input id="title" formControlName="title">
+                <div *ngIf="title.invalid && (title.dirty || title.touched)" class="errors">
+                    <div *ngIf="title.errors.required">
+                        Exercise Name is required.
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Measurement type</label>
+                <select (change)="handleSelect($event.target.value)" [value]="selectedOption">
+                    <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                </select>
+            </div>
+            <button>Add</button>
+        </form>
+    </mat-card>
+</div>

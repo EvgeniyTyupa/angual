@@ -1,0 +1,21 @@
+<div class="main">
+    <mat-card>
+        <div class="header">
+            <h3>Edit Workout</h3>
+            <span>{{presentationDate}}</span>
+            <button (click)="addEx()">Add Ex+</button>
+        </div>
+        <div *ngIf="workout" class="exercises">
+            <app-exerciseworkout
+                *ngFor="let ex of workout; let i = index" [attr.data-index]="i"
+                [exercise]="ex"
+                [workout]="workout"
+                [index]="i"
+                (onDelete)="deleteEx($event)"
+                (onMoveUp)="moveUp($event)"
+                (onMoveDown)="moveDown($event)">
+            </app-exerciseworkout>
+        </div>
+        <button type="submit" (click)="updateWorkout()">Update Workout</button>
+    </mat-card>
+</div>

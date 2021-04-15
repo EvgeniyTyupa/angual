@@ -1,0 +1,20 @@
+<div class="main">
+    <mat-card>
+        <h3>Sign up</h3>
+        <form (ngSubmit)="onSubmit()" name="regForm" [formGroup]="form">
+            <div class="field">
+                <label>Email</label>
+                <input formControlName="email" type="email"/>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input formControlName="password" type="password"/>
+            </div>
+            <div class="field">
+                <label>Repeat Password</label>
+                <input formControlName="repassword" type="password"/>
+            </div>
+            <button>Register</button>
+        </form>
+    </mat-card>
+</div>

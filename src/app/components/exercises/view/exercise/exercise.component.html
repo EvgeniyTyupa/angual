@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="field">
+        <label>Title</label>
+        <input (change)="handleInput($event.target.value)" [(ngModel)]="currentValue" placeholder="Ex Name"/>
+    </div>
+    <div class="field">
+        <label>Measurement type</label>
+        <select (change)="handleSelect($event.target.value)">
+            <option *ngFor="let option of options" [selected]="selectedOption === option" [value]="option">{{option}}</option>
+        </select>
+    </div>
+    <div class="buttons">
+        <button (click)="moveUp()" class="move">▲</button>
+        <button (click)="moveDown()" class="move">▼</button>
+        <button (click)="deleteEx()" class="del">&#10060;</button>
+    </div>
+</div>

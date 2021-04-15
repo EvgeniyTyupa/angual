@@ -1,0 +1,70 @@
+.main{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, .2);
+    padding-bottom: 20px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+}
+.field input{
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 16px;
+}
+.field label{
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+.field select{
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    width: 150px;
+    font-size: 16px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
+}
+.buttons{
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition-duration: .3s;
+}
+
+.move{
+    background-color: teal;
+    font-size: 22px;
+}
+.move:hover{
+    background-color: rgb(2, 95, 95);
+}
+.del{
+    background-color: white;
+    border: 1px solid gray
+}
+.del:hover{
+    background-color: rgb(243, 243, 243);
+}

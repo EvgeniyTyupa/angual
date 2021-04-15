@@ -1,0 +1,25 @@
+<nav *ngIf="!token">
+    <div class="side">
+        <h2>Angular App</h2>
+    </div>
+    <div class="side">
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+        <a routerLink="/register" routerLinkActive="active">Sign up</a>
+    </div>
+</nav>
+<nav *ngIf="token">
+    <div class="side">
+        <h2>Angular App</h2>
+        <div class="links">
+            <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            <a routerLink="/exercise/view" routerLinkActive="active">Edit Exercises</a>
+            <a routerLink="/workouts/view/{{workoutId}}" routerLinkActive="active">Edit Workout</a>
+            <a routerLink="/exercise/add" routerLinkActive="active">Add Exercise</a>
+            <a routerLink="/workouts/add" routerLinkActive="active">Add Workout</a>
+        </div>
+    </div>
+    <div *ngIf="userData" class="side">
+        <p>{{userData.email}}</p>
+        <button (click)="logout()">Exit</button>
+    </div>
+</nav>
